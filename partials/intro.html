@@ -1,0 +1,90 @@
+<header class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="logo">
+                <img src="images/logo.png" width="100%" height="100%" alt=""/>
+            </div>
+        </div>
+    </div>
+</header>
+    
+<h1 class="page-title">CSS with superpowers</h1>
+
+<div class="jumbotron">
+    <ul>
+        <li>Sass (<span class="purple">S</span>yntactically <span class="purple">A</span>wesome <span class="purple">S</span>tyle<span class="purple">s</span>heets)</li>
+        <li>Sass is a CSS preprocessor—a layer between the stylesheets you author and the <code>.css</code> files you serve to the browser.</li>
+        <li>Sass is interpreted into Cascading Style Sheets (CSS)</li>
+        <li>
+            2 syntaxes:<br/>
+            - <a href="javascript:void(0);" data-toggle="modal" data-target="#original-syntax-modal">"Indented syntax" (original)</a><br/>
+            - <a href="javascript:void(0);" data-toggle="modal" data-target="#newer-syntax-modal">Newer syntax, "SCSS"</a>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div class="modal fade" id="original-syntax-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h2>"The indented syntax"</h2>
+            </div>
+            <div class="modal-body">
+                <p>It uses indentation to separate code blocks and newline characters to separate rules.</p>
+                <p><strong>Example:</strong></p>
+<pre>
+$blue: #3bbfce
+$margin: 16px
+ 
+.content-navigation
+  border-color: $blue
+  color: darken($blue, 9%)
+ 
+.border
+  padding: $margin/2
+  margin:  $margin/2
+  border-color: $blue
+</pre>
+            </div>
+            <div class="modal-footer">
+                <p>File extension: <strong><span class="highlight">.sass</span></strong></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="newer-syntax-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h2>The newer syntax, "SCSS"</h2>
+            </div>
+            <div class="modal-body">
+                <p>It uses block formatting like that of CSS. It uses braces to denote code blocks and semicolons to separate lines within a block.</p>
+                <p><strong>Example:</strong></p>
+<pre>
+$blue: #3bbfce;
+$margin: 16px;
+ 
+.content-navigation {
+  border-color: $blue;
+  color:
+    darken($blue, 20%);
+}
+ 
+.border {
+  padding: $margin / 2;
+  margin: $margin / 2;
+  border-color: $blue;
+}
+</pre>
+            </div>
+            <div class="modal-footer">
+                <p>File extension: <strong><span class="highlight">.scss</span></strong></p>
+            </div>
+        </div>
+    </div>
+</div>

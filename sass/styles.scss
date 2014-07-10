@@ -1,0 +1,177 @@
+@import "compass/css3";
+
+$basePurple: #C6538C;
+$hoverPurple: #c24785;
+$baseGray: #808C99;
+
+/*
+ * ====================================
+ *             Main Styles
+ * ====================================
+ */
+.clear {
+    clear: both;
+}
+
+html {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+body {
+    padding-bottom: 25px;
+}
+
+header {
+    .logo {
+        width: 250px;
+        margin: 25px auto;
+    }
+}
+
+nav {
+    position: fixed;
+    top: 30%;
+    right: 25px;
+    z-index: 10;
+    
+    ul li {
+        list-style: none;
+        margin-bottom: 10px;
+        
+        a {
+            display: block;
+            width: 18px;
+            height: 18px;
+            background: $baseGray;
+            @include border-radius(9px);
+            margin-left: 300px;
+            outline: 0;
+            border: 0;
+            opacity: 0.5;
+            transition: all 0.35s ease;
+            -webkit-transition: all 0.35s ease;
+            
+            &:hover {
+                opacity: 1;
+                transform: scale(1.2);
+                -webkit-transform: scale(1.2);
+            }
+            
+            &.active {
+                opacity: 1;
+                background: $basePurple;
+                transform: scale(1.2);
+                -webkit-transform: scale(1.2);
+                box-shadow: inset -2px -2px 10px rgba(#464646, 0.4), 0px 0px 5px rgba(#fff, 0.2), inset 0px 0px 5px rgba(#fff, 0.2);
+            }
+        }
+    }
+}
+
+.tooltip {
+    font-size: 22px;
+}
+
+h1.page-title {
+    color: $baseGray;
+    font-size: 4.50em;
+    font-weight: normal;
+    text-align: center;
+    padding: 40px 0 45px 0;
+    
+    & span {
+        font-size: 0.33em;
+    }
+}
+
+.jumbotron {
+    clear: both;
+    
+    ul li,
+    ol li {
+        font-size: 2.00em;
+        line-height: 130%;
+        padding: 0 0 0.8em 0;
+    }
+    ul li span.purple,
+    ol li span.purple {
+        color: $basePurple;
+    }
+    pre {
+        font-size: 20px;
+    }
+}
+
+.button-area {
+    float: right;
+    margin-bottom: 15px;
+}
+button {
+    float: right;
+    outline: none !important;
+
+    &:nth-child(2n+1),
+    &:last-child {
+        margin-right: 10px;
+    }
+}
+.btn-primary {
+    background: $basePurple;
+    border: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background: $hoverPurple;
+    }
+}
+
+.edit {
+    font-size: 1.33em;
+}
+
+span.highlight {
+    color: $basePurple;
+}
+
+.modal-header h2{
+    color: $basePurple;
+}
+.modal p {
+    font-size: 22px;
+}
+.modal pre {
+    font-size: 20px;
+}
+.modal-footer {
+    text-align: left;
+}
+
+.footer {
+    p {
+        color: #666666;
+    }
+}
+
+/*
+ * ====================================
+ *           View Animations
+ * ====================================
+ */
+/*#mainView.ng-enter {
+    -webkit-animation: fadeInDown 0.5s;
+    -moz-animation: fadeInDown 0.5s;
+    -ms-animation: fadeInDown 0.5s;
+    animation: fadeInDown 0.5s;
+}*/
+
+
+#mainView.ng-enter {
+    -webkit-animation: bounceInLeft 0.8s;
+    -moz-animation: bounceInLeft 0.8s;
+    -ms-animation: bounceInLeft 0.8s;
+    animation: bounceInLeft 0.8s;
+}
+
+@import "examples.scss";

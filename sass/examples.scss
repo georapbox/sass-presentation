@@ -1,0 +1,197 @@
+/*
+ * =================================
+ *         Examples Styles
+ * =================================
+*/
+
+/* NESTING STYLES */
+.nesting-styles {
+    ul {
+        padding: 0px;
+        margin: 0px;
+
+        li {
+            list-style: none;
+            float: left;
+            margin: 0px 10px 0px 0px;
+
+            &.last {
+                margin: 0px;
+            }
+
+            a {
+                display: block;
+                width: 100px;
+                padding: 10px;
+                text-align: center;
+                background: #C6538C;
+                color: #ffffff;
+                @include border-radius(5px);
+
+                &:hover {
+                    background: #000000;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+/* VARIABLES */
+.variables {
+    $base-color: #C6538C;
+    $secondary-color: #808C99;
+    $hover-color: #121212;
+    $text-color: #ffffff;
+    
+    ul {
+        margin: 0;
+        padding: 0;
+        
+        li {
+            list-style: none;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            padding-top: 14px;
+            color: $text-color;
+            
+            &:nth-child(even) {
+                background: $base-color;
+            }
+            &:nth-child(odd) {
+                background: $secondary-color;
+            }
+            &:hover {
+                background: $hover-color;
+            }
+        }
+    }
+}
+
+/* MIXINS */
+.mixins {
+    @mixin border-radius($radius) {
+        -webkit-border-radius: $radius;
+        -moz-border-radius: $radius;
+        border-radius: $radius;
+    }
+    
+    @mixin transition($element, $duration, $easing) {
+        transition: $element $duration $easing;
+        -webkit-transition: $element $duration $easing;
+        -moz-transition: $element $duration $easing;
+    }
+    
+    @mixin scale($percent) {
+        transform: scale($percent);
+        -webkit-transform: scale($percent);
+        -moz-transform: scale($percent);
+    }
+    
+    .circle-1 {
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        background: #C6538C;
+        
+        @include border-radius(100px);
+        @include transition(all, 0.5s, ease);
+        
+        &:hover {
+            @include scale(0.8);
+        }
+    }
+    
+    .circle-2 {
+        display: inline-block;
+        width: 150px;
+        height: 150px;
+        background: #808C99;
+        
+        @include border-radius(75px);
+        @include transition(all, 0.3s, ease);
+        
+        &:hover {
+            @include scale(1.2);
+        }
+    }
+    
+    .circle-3 {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background: #b1bed6;
+        
+        @include border-radius(50px);
+    }
+}
+
+/* SELECTOR INHERITANCE */
+.selector-inheritance {
+    .message {
+        width: 350px;
+        padding: 10px;
+        color: #fff;
+        background: #787878;
+        margin-bottom: 10px;
+        @include border-radius(5px);
+    }
+
+    .success {
+        @extend .message;
+        background: #166216;
+    }
+
+    .error {
+        @extend .message;
+        background: #ac1f1f;
+    }
+
+    .warning {
+        @extend .message;
+        background: #d94601;
+    }
+}
+
+/* FUNCTIONS */
+.functions {
+    .clear { clear: both; }
+    .box {
+        width: 400px;
+        height: 150px;
+        color: #ffffff;
+        text-align: center;
+        padding-top: 57px;
+        margin-bottom: 20px;
+        background: rgba(#C6538C, 0.5);
+    }
+
+    .col-1, .col-2 {
+        float: left;
+        padding: 15px;
+        color: #ffffff;
+        @include border-radius(5px);
+    }
+    .col-1 {
+        background: #C6538C;
+        width: percentage(380px / 1200px);
+        margin-right: percentage(20px / 1200px);
+    }
+    .col-2 {
+        background: #808C99;
+        width: percentage(800px / 1200px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

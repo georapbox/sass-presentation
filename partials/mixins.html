@@ -1,0 +1,82 @@
+<h1 class="page-title">Mixins <span><a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#mixins" target="_blank">(docs)</a></span></h1>
+
+<h2>Code</h2>
+<div class="jumbotron">
+
+    <h3>HTML</h3>
+<pre>
+&lt;div class="circle-1"&gt;&lt;/div&gt;
+&lt;div class="circle-2"&gt;&lt;/div&gt;
+&lt;div class="circle-3"&gt;&lt;/div&gt;
+</pre>
+
+    <h3>SCSS</h3>
+<pre>
+<strong>@mixin border-radius(<span class="highlight">$radius</span>) {
+    -webkit-border-radius: <span class="highlight">$radius</span>;
+    -moz-border-radius: <span class="highlight">$radius</span>;
+    border-radius: <span class="highlight">$radius</span>;
+}
+
+@mixin transition(<span class="highlight">$element, $duration, $easing</span>) {
+    transition: <span class="highlight">$element, $duration, $easing</span>;
+    -webkit-transition: <span class="highlight">$element, $duration, $easing</span>;
+    -moz-transition: <span class="highlight">$element, $duration, $easing</span>;
+}
+
+@mixin scale(<span class="highlight">$percent</span>) {
+    transform: scale(<span class="highlight">$percent</span>);
+    -webkit-transform: scale(<span class="highlight">$percent</span>);
+    -moz-transform: scale(<span class="highlight">$percent</span>);
+}</strong>
+
+.circle-1 {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background: #C6538C;
+
+    <strong>@include border-radius(100px);
+    @include transition(all, 0.5s, ease);</strong>
+
+    &:hover {
+        <strong>@include scale(0.8);</strong>
+    }
+}
+
+.circle-2 {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background: #808C99;
+
+    <strong>@include border-radius(75px);
+    @include transition(all, 0.3s, ease);</strong>
+
+    &:hover {
+        <strong>@include scale(1.2);</strong>
+    }
+}
+
+.circle-3 {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: #b1bed6;
+
+    @include border-radius(50px);
+}
+</pre>
+</div>
+
+<h2>Result</h2>
+<div class="well mixins">
+    <div class="circle-1"></div>
+    <div class="circle-2"></div>
+    <div class="circle-3"></div>
+</div>
+
+<p class="edit">
+    <span class="glyphicon glyphicon-edit"></span>
+    <a target="_blank" href='http://codepen.io/georapbox/pen/exjBD'>Edit in CodePen</a>
+</p>

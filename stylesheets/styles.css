@@ -1,0 +1,375 @@
+/*
+ * ====================================
+ *             Main Styles
+ * ====================================
+ */
+/* line 12, ../sass/styles.scss */
+.clear {
+  clear: both;
+}
+
+/* line 16, ../sass/styles.scss */
+html {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+/* line 21, ../sass/styles.scss */
+body {
+  padding-bottom: 25px;
+}
+
+/* line 26, ../sass/styles.scss */
+header .logo {
+  width: 250px;
+  margin: 25px auto;
+}
+
+/* line 32, ../sass/styles.scss */
+nav {
+  position: fixed;
+  top: 30%;
+  right: 25px;
+  z-index: 10;
+}
+/* line 38, ../sass/styles.scss */
+nav ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+/* line 42, ../sass/styles.scss */
+nav ul li a {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: #808c99;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  -ms-border-radius: 9px;
+  -o-border-radius: 9px;
+  border-radius: 9px;
+  margin-left: 300px;
+  outline: 0;
+  border: 0;
+  opacity: 0.5;
+  transition: all 0.35s ease;
+  -webkit-transition: all 0.35s ease;
+}
+/* line 55, ../sass/styles.scss */
+nav ul li a:hover {
+  opacity: 1;
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+}
+/* line 61, ../sass/styles.scss */
+nav ul li a.active {
+  opacity: 1;
+  background: #c6538c;
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  box-shadow: inset -2px -2px 10px rgba(70, 70, 70, 0.4), 0px 0px 5px rgba(255, 255, 255, 0.2), inset 0px 0px 5px rgba(255, 255, 255, 0.2);
+}
+
+/* line 72, ../sass/styles.scss */
+.tooltip {
+  font-size: 22px;
+}
+
+/* line 76, ../sass/styles.scss */
+h1.page-title {
+  color: #808c99;
+  font-size: 4.50em;
+  font-weight: normal;
+  text-align: center;
+  padding: 40px 0 45px 0;
+}
+/* line 83, ../sass/styles.scss */
+h1.page-title span {
+  font-size: 0.33em;
+}
+
+/* line 88, ../sass/styles.scss */
+.jumbotron {
+  clear: both;
+}
+/* line 92, ../sass/styles.scss */
+.jumbotron ul li,
+.jumbotron ol li {
+  font-size: 2.00em;
+  line-height: 130%;
+  padding: 0 0 0.8em 0;
+}
+/* line 98, ../sass/styles.scss */
+.jumbotron ul li span.purple,
+.jumbotron ol li span.purple {
+  color: #c6538c;
+}
+/* line 101, ../sass/styles.scss */
+.jumbotron pre {
+  font-size: 20px;
+}
+
+/* line 106, ../sass/styles.scss */
+.button-area {
+  float: right;
+  margin-bottom: 15px;
+}
+
+/* line 110, ../sass/styles.scss */
+button {
+  float: right;
+  outline: none !important;
+}
+/* line 115, ../sass/styles.scss */
+button:nth-child(2n+1), button:last-child {
+  margin-right: 10px;
+}
+
+/* line 119, ../sass/styles.scss */
+.btn-primary {
+  background: #c6538c;
+  border: none;
+}
+/* line 125, ../sass/styles.scss */
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+  background: #c24785;
+}
+
+/* line 130, ../sass/styles.scss */
+.edit {
+  font-size: 1.33em;
+}
+
+/* line 134, ../sass/styles.scss */
+span.highlight {
+  color: #c6538c;
+}
+
+/* line 138, ../sass/styles.scss */
+.modal-header h2 {
+  color: #c6538c;
+}
+
+/* line 141, ../sass/styles.scss */
+.modal p {
+  font-size: 22px;
+}
+
+/* line 144, ../sass/styles.scss */
+.modal pre {
+  font-size: 20px;
+}
+
+/* line 147, ../sass/styles.scss */
+.modal-footer {
+  text-align: left;
+}
+
+/* line 152, ../sass/styles.scss */
+.footer p {
+  color: #666666;
+}
+
+/*
+ * ====================================
+ *           View Animations
+ * ====================================
+ */
+/*#mainView.ng-enter {
+    -webkit-animation: fadeInDown 0.5s;
+    -moz-animation: fadeInDown 0.5s;
+    -ms-animation: fadeInDown 0.5s;
+    animation: fadeInDown 0.5s;
+}*/
+/* line 170, ../sass/styles.scss */
+#mainView.ng-enter {
+  -webkit-animation: bounceInLeft 0.8s;
+  -moz-animation: bounceInLeft 0.8s;
+  -ms-animation: bounceInLeft 0.8s;
+  animation: bounceInLeft 0.8s;
+}
+
+/*
+ * =================================
+ *         Examples Styles
+ * =================================
+*/
+/* NESTING STYLES */
+/* line 9, ../sass/examples.scss */
+.nesting-styles ul {
+  padding: 0px;
+  margin: 0px;
+}
+/* line 13, ../sass/examples.scss */
+.nesting-styles ul li {
+  list-style: none;
+  float: left;
+  margin: 0px 10px 0px 0px;
+}
+/* line 18, ../sass/examples.scss */
+.nesting-styles ul li.last {
+  margin: 0px;
+}
+/* line 22, ../sass/examples.scss */
+.nesting-styles ul li a {
+  display: block;
+  width: 100px;
+  padding: 10px;
+  text-align: center;
+  background: #C6538C;
+  color: #ffffff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 31, ../sass/examples.scss */
+.nesting-styles ul li a:hover {
+  background: #000000;
+  text-decoration: none;
+}
+
+/* VARIABLES */
+/* line 47, ../sass/examples.scss */
+.variables ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 51, ../sass/examples.scss */
+.variables ul li {
+  list-style: none;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  padding-top: 14px;
+  color: white;
+}
+/* line 60, ../sass/examples.scss */
+.variables ul li:nth-child(even) {
+  background: #c6538c;
+}
+/* line 63, ../sass/examples.scss */
+.variables ul li:nth-child(odd) {
+  background: #808c99;
+}
+/* line 66, ../sass/examples.scss */
+.variables ul li:hover {
+  background: #121212;
+}
+
+/* MIXINS */
+/* line 93, ../sass/examples.scss */
+.mixins .circle-1 {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background: #C6538C;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+}
+/* line 102, ../sass/examples.scss */
+.mixins .circle-1:hover {
+  transform: scale(0.8);
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+}
+/* line 107, ../sass/examples.scss */
+.mixins .circle-2 {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  background: #808C99;
+  -webkit-border-radius: 75px;
+  -moz-border-radius: 75px;
+  border-radius: 75px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+}
+/* line 116, ../sass/examples.scss */
+.mixins .circle-2:hover {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+}
+/* line 121, ../sass/examples.scss */
+.mixins .circle-3 {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background: #b1bed6;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+}
+
+/* SELECTOR INHERITANCE */
+/* line 133, ../sass/examples.scss */
+.selector-inheritance .message, .selector-inheritance .success, .selector-inheritance .error, .selector-inheritance .warning {
+  width: 350px;
+  padding: 10px;
+  color: #fff;
+  background: #787878;
+  margin-bottom: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 142, ../sass/examples.scss */
+.selector-inheritance .success {
+  background: #166216;
+}
+/* line 147, ../sass/examples.scss */
+.selector-inheritance .error {
+  background: #ac1f1f;
+}
+/* line 152, ../sass/examples.scss */
+.selector-inheritance .warning {
+  background: #d94601;
+}
+
+/* FUNCTIONS */
+/* line 160, ../sass/examples.scss */
+.functions .clear {
+  clear: both;
+}
+/* line 161, ../sass/examples.scss */
+.functions .box {
+  width: 400px;
+  height: 150px;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 57px;
+  margin-bottom: 20px;
+  background: rgba(198, 83, 140, 0.5);
+}
+/* line 171, ../sass/examples.scss */
+.functions .col-1, .functions .col-2 {
+  float: left;
+  padding: 15px;
+  color: #ffffff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 177, ../sass/examples.scss */
+.functions .col-1 {
+  background: #C6538C;
+  width: 31.66667%;
+  margin-right: 1.66667%;
+}
+/* line 182, ../sass/examples.scss */
+.functions .col-2 {
+  background: #808C99;
+  width: 66.66667%;
+}

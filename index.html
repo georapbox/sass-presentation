@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title ng-bind="$state.current.title"></title>
+    <meta name="author" content="George Raptis">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="stylesheets/animate.css"/>
+    <link rel="stylesheet" href="stylesheets/styles.css"/>
+</head>
+<body>
+   <nav data-ng-controller="NavCtrl">
+       <ul>
+           <li><a ui-sref-active="active" ui-sref="intro" title="Intro"></a></li>
+           <li><a ui-sref-active="active" ui-sref="why-sass" title="Why SASS?"></a></li>
+           <li><a ui-sref-active="active" ui-sref="installing-sass" data-toggle="tooltip" title="Installing SASS"></a></li>
+           <li><a ui-sref-active="active" ui-sref="style-nesting" title="Style nesting"></a></li>
+           <li><a ui-sref-active="active" ui-sref="variables" title="Variables"></a></li>
+           <li><a ui-sref-active="active" ui-sref="mixins" title="Mixins"></a></li>
+           <li><a ui-sref-active="active" ui-sref="selector-inheritance" title="Selector inheritance"></a></li>
+           <li><a ui-sref-active="active" ui-sref="functions" title="Functions"></a></li>
+           <li><a ui-sref-active="active" ui-sref="resources" title="Resources"></a></li>
+       </ul>
+   </nav>
+   
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="mainView" ui-view></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container footer">
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="text-right">@author <a href="http://georap.gr" target="_blank">georapbox</a></p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular/angular-animate.js"></script>
+    <script src="bower_components/angular/animate.js"></script>
+    <script src="bower_components/angular/angular-ui-router.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+</body>
+</html>

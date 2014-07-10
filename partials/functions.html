@@ -1,0 +1,54 @@
+<h1 class="page-title">Functions <span><a href="http://sass-lang.com/documentation/Sass/Script/Functions.html" target="_blank">(docs)</a></span></h1>
+
+<h2>Code</h2>
+<div class="jumbotron">
+
+    <h3>HTML</h3>
+<pre>
+&lt;div class="col-1"&gt;...&lt;/div&gt;
+&lt;div class="col-2"&gt;...&lt;/div&gt;
+</pre>
+
+    <h3>SCSS</h3>
+<pre>
+.box {
+    ...
+    <strong><span class="highlight">background: rgba(#C6538C, 0.5);</span></strong>
+}
+
+.col-1, .col-2 {
+    float: left;
+    @include border-radius(5px);
+}
+.col-1 {
+    background: #C6538C;
+    width: <strong><span class="highlight">percentage(380px / 1200px);</span></strong>
+    margin-right: <strong><span class="highlight">percentage(20px / 1200px);</span></strong>
+}
+.col-2 {
+    background: #808C99;
+    width: <strong><span class="highlight">percentage(800px / 1200px);
+}
+</pre>
+</div>
+
+<h2>Result</h2>
+<div class="well functions">
+    <div class="box"><h4>background: rgba(#C6538C, 0.5);</h4></div>
+
+    <div class="col-1">
+        <h4>width: percentage(380px / 1200px);</h4>
+        <h4>margin-right: percentage(20px / 1200px);</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, vero iure sint possimus, facilis ipsam consectetur in labore nemo delectus sit ipsa voluptatibus, incidunt et quia. Illo molestiae expedita perferendis!</p>
+    </div>
+    <div class="col-2">
+        <h4>width: percentage(800px / 1200px);</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas est, mollitia iusto porro maxime et. Fugiat, harum ex! Soluta, ducimus perspiciatis veniam tempore exercitationem dolorem sequi explicabo nesciunt, molestiae a!</p>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<p class="edit">
+    <span class="glyphicon glyphicon-edit"></span>
+    <a target="_blank" href='http://codepen.io/georapbox/pen/ulgIC'>Edit in CodePen</a>
+</p>

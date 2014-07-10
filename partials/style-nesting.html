@@ -1,0 +1,68 @@
+<h1 class="page-title">Style Nesting <span><a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#nested_rules" target="_blank">(docs)</a></span></h1>
+
+<h2>Code</h2>
+<div class="jumbotron">
+
+    <h3>HTML</h3>
+<pre>
+&lt;ul&gt;
+    &lt;li&gt;
+        &lt;a href="#"&gt;link 1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="last"&gt;
+        &lt;a href="#"&gt;link 2&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+    <h3>SCSS</h3>
+<pre>
+ul {
+    padding: 0px;
+    margin: 0px;
+
+    li {
+        list-style: none;
+        float: left;
+        margin: 0px 10px 0px 0px;
+
+        &.last {
+            margin: 0px;
+        }
+
+        a {
+            display: block;
+            width: 100px;
+            padding: 10px;
+            text-align: center;
+            background: $basePurple;
+            color: #ffffff;
+            @include border-radius(5px);
+
+            &:hover {
+                background: #000000;
+                text-decoration: none;
+            }
+        }
+    }
+}
+</pre>
+</div>
+
+<h2>Result</h2>
+<div class="well nesting-styles">
+    <ul>
+        <li>
+            <a href="javascript:void(0);">link 1</a>
+        </li>
+        <li class="last">
+            <a href="javascript:void(0);">link 2</a>
+        </li>
+    </ul>
+    <div class="clear"></div>
+</div>
+
+<p class="edit">
+    <span class="glyphicon glyphicon-edit"></span>
+    <a target="_blank" href='http://codepen.io/georapbox/pen/knFvK/'>Edit in CodePen</a>
+</p>  

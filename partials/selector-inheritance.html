@@ -1,0 +1,53 @@
+<h1 class="page-title">Selector Inheritance <span><a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#extend" target="_blank">(docs)</a></span></h1>
+
+<h2>Code</h2>
+<div class="jumbotron">
+
+    <h3>HTML</h3>
+<pre>
+&lt;div class="<strong>message</strong>"&gt;I am just a message.&lt;/div&gt;
+&lt;div class="<strong>success</strong>"&gt;I am a SUCCESS message.&lt;/div&gt;
+&lt;div class="<strong>warning</strong>"&gt;I am a WARNING message.&lt;/div&gt;
+&lt;div class="<strong>error</strong>"&gt;I am an ERROR message.&lt;/div&gt;
+</pre>
+
+    <h3>SCSS</h3>
+<pre>
+.message {
+    width: 350px;
+    padding: 10px;
+    color: #fff;
+    background: #787878;
+    margin-bottom: 10px;
+    @include border-radius(5px);
+}
+
+.success {
+    <strong><span class="highlight">@extend</span> .message;</strong>
+    background: #166216;
+}
+
+.error {
+    <strong><span class="highlight">@extend</span> .message;</strong>
+    background: #ac1f1f;
+}
+
+.warning {
+    <strong><span class="highlight">@extend</span> .message;</strong>
+    background: #d94601;
+}
+</pre>
+</div>
+
+<h2>Result</h2>
+<div class="well selector-inheritance">
+    <div class="message">I am just a message.</div>
+    <div class="success">I am a SUCCESS message.</div>
+    <div class="warning">I am a WARNING message.</div>
+    <div class="error">I am an ERROR message.</div>
+</div>
+
+<p class="edit">
+    <span class="glyphicon glyphicon-edit"></span>
+    <a target="_blank" href='http://codepen.io/georapbox/pen/tfzHe'>Edit in CodePen</a>
+</p>
