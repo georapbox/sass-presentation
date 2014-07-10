@@ -40,6 +40,8 @@ body {
 }
 #canvas {
     background: url(../images/night_sky.jpg) no-repeat;
+    -webkit-background-size: cover cover;
+    background-size: cover;
 }
 
 header {
