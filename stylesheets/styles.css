@@ -19,25 +19,48 @@ body {
   padding-bottom: 25px;
 }
 
-/* line 26, ../sass/styles.scss */
+/* line 25, ../sass/styles.scss */
+.canvas {
+  display: none;
+}
+/* line 28, ../sass/styles.scss */
+.canvas h2 {
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  width: 600px;
+  margin-left: -300px;
+  color: #c6538c;
+  text-align: center;
+  font-size: 100px;
+  font-weight: bold;
+  z-index: 99999;
+}
+
+/* line 41, ../sass/styles.scss */
+#canvas {
+  background: url(../images/night_sky.jpg) no-repeat;
+}
+
+/* line 46, ../sass/styles.scss */
 header .logo {
   width: 250px;
   margin: 25px auto;
 }
 
-/* line 32, ../sass/styles.scss */
+/* line 52, ../sass/styles.scss */
 nav {
   position: fixed;
   top: 30%;
   right: 25px;
   z-index: 10;
 }
-/* line 38, ../sass/styles.scss */
+/* line 58, ../sass/styles.scss */
 nav ul li {
   list-style: none;
   margin-bottom: 10px;
 }
-/* line 42, ../sass/styles.scss */
+/* line 62, ../sass/styles.scss */
 nav ul li a {
   display: block;
   width: 18px;
@@ -55,13 +78,13 @@ nav ul li a {
   transition: all 0.35s ease;
   -webkit-transition: all 0.35s ease;
 }
-/* line 55, ../sass/styles.scss */
+/* line 75, ../sass/styles.scss */
 nav ul li a:hover {
   opacity: 1;
   transform: scale(1.2);
   -webkit-transform: scale(1.2);
 }
-/* line 61, ../sass/styles.scss */
+/* line 81, ../sass/styles.scss */
 nav ul li a.active {
   opacity: 1;
   background: #c6538c;
@@ -70,12 +93,12 @@ nav ul li a.active {
   box-shadow: inset -2px -2px 10px rgba(70, 70, 70, 0.4), 0px 0px 5px rgba(255, 255, 255, 0.2), inset 0px 0px 5px rgba(255, 255, 255, 0.2);
 }
 
-/* line 72, ../sass/styles.scss */
+/* line 92, ../sass/styles.scss */
 .tooltip {
   font-size: 22px;
 }
 
-/* line 76, ../sass/styles.scss */
+/* line 96, ../sass/styles.scss */
 h1.page-title {
   color: #808c99;
   font-size: 4.50em;
@@ -83,89 +106,88 @@ h1.page-title {
   text-align: center;
   padding: 40px 0 45px 0;
 }
-/* line 83, ../sass/styles.scss */
+/* line 103, ../sass/styles.scss */
 h1.page-title span {
   font-size: 0.33em;
 }
 
-/* line 88, ../sass/styles.scss */
+/* line 108, ../sass/styles.scss */
 .jumbotron {
   clear: both;
 }
-/* line 92, ../sass/styles.scss */
+/* line 112, ../sass/styles.scss */
 .jumbotron ul li,
 .jumbotron ol li {
   font-size: 2.00em;
   line-height: 130%;
   padding: 0 0 0.8em 0;
 }
-/* line 98, ../sass/styles.scss */
+/* line 118, ../sass/styles.scss */
 .jumbotron ul li span.purple,
 .jumbotron ol li span.purple {
   color: #c6538c;
 }
-/* line 101, ../sass/styles.scss */
+/* line 121, ../sass/styles.scss */
 .jumbotron pre {
   font-size: 20px;
 }
 
-/* line 106, ../sass/styles.scss */
+/* line 126, ../sass/styles.scss */
 .button-area {
-  float: right;
+  text-align: center;
   margin-bottom: 15px;
 }
 
-/* line 110, ../sass/styles.scss */
+/* line 130, ../sass/styles.scss */
 button {
-  float: right;
   outline: none !important;
 }
-/* line 115, ../sass/styles.scss */
+/* line 134, ../sass/styles.scss */
 button:nth-child(2n+1), button:last-child {
   margin-right: 10px;
 }
 
-/* line 119, ../sass/styles.scss */
+/* line 138, ../sass/styles.scss */
 .btn-primary {
   background: #c6538c;
   border: none;
 }
-/* line 125, ../sass/styles.scss */
+/* line 144, ../sass/styles.scss */
 .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
   background: #c24785;
 }
 
-/* line 130, ../sass/styles.scss */
+/* line 149, ../sass/styles.scss */
 .edit {
   font-size: 1.33em;
 }
 
-/* line 134, ../sass/styles.scss */
+/* line 153, ../sass/styles.scss */
 span.highlight {
   color: #c6538c;
 }
 
-/* line 138, ../sass/styles.scss */
+/* line 157, ../sass/styles.scss */
 .modal-header h2 {
   color: #c6538c;
 }
 
-/* line 141, ../sass/styles.scss */
+/* line 160, ../sass/styles.scss */
 .modal p {
   font-size: 22px;
 }
 
-/* line 144, ../sass/styles.scss */
+/* line 163, ../sass/styles.scss */
 .modal pre {
   font-size: 20px;
 }
 
-/* line 147, ../sass/styles.scss */
+/* line 166, ../sass/styles.scss */
 .modal-footer {
   text-align: left;
 }
 
-/* line 152, ../sass/styles.scss */
+/* line 171, ../sass/styles.scss */
 .footer p {
   color: #666666;
 }
@@ -181,7 +203,7 @@ span.highlight {
     -ms-animation: fadeInDown 0.5s;
     animation: fadeInDown 0.5s;
 }*/
-/* line 170, ../sass/styles.scss */
+/* line 189, ../sass/styles.scss */
 #mainView.ng-enter {
   -webkit-animation: bounceInLeft 0.8s;
   -moz-animation: bounceInLeft 0.8s;

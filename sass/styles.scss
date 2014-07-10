@@ -22,6 +22,26 @@ body {
     padding-bottom: 25px;
 }
 
+.canvas {
+    display: none;
+    
+    h2 {
+        position: absolute;
+        top: 150px;
+        left: 50%;
+        width: 600px;
+        margin-left: -300px;
+        color: $basePurple;
+        text-align: center;
+        font-size: 100px;
+        font-weight: bold;
+        z-index: 99999;
+    }
+}
+#canvas {
+    background: url(../images/night_sky.jpg) no-repeat;
+}
+
 header {
     .logo {
         width: 250px;
@@ -104,11 +124,10 @@ h1.page-title {
 }
 
 .button-area {
-    float: right;
+    text-align: center;
     margin-bottom: 15px;
 }
 button {
-    float: right;
     outline: none !important;
 
     &:nth-child(2n+1),
