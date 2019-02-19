@@ -3,7 +3,7 @@ sass-presentation
 
 SASS (Syntactically Awesome Stylesheets) core features demonstration.
 
-####Table of contents:
+#### Table of contents:
 1. Introduction
 2. Why SASS?
 3. Installing SASS
